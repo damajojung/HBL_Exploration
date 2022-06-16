@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH --partition=gpu_shared
+#SBATCH --mem=200G
+#SBATCH --time=00:40:00
+
+ 
+cd /home/jungd/HBL/ImageNet_HBL
+source /home/jungd/anaconda3/etc/profile.d/conda.sh
+conda activate torchconda
+python imnet_generator.py -train_path /home/jungd/HBL/ImageNet_HBL/data/imnet/Imagenet32_train/ -test_path /home/jungd/HBL/ImageNet_HBL/data/imnet/val_data -bs 200 -is 32

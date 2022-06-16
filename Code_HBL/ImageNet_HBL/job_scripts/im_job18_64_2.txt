@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=128G
+#SBATCH --partition=gpu_shared
+#SBATCH --time=02:30:00
+
+ 
+cd /home/jungd/HBL/ImageNet_HBL
+source /home/jungd/anaconda3/etc/profile.d/conda.sh
+conda activate torchconda
+wandb login afd5dc6da7d5259f81a22c49850a846472147d88
+python HBL.py --data_name pthimnet64 -e 20 -s 128 -r adam -l 1e-3 -c 5e-8 --mult 0.0 -n resnet18 --datadir data/ --resdir runs/output_dir/imnet/ --hpnfile prototypes/prototypes-10d-1000c.npy --logdir test --do_decay True --drop1 14 --drop2 18 --seed 100 -r_val 1.0
