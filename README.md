@@ -11,9 +11,9 @@ The first step is to learn the ideal prototypes. One has to specify the amount o
 python prototype_learning.py -d 1000 -c 1000
 ```
 
-Where `-d` stands for dimensions and `c` amount of classes.
+Where `-d` stands for dimensions and `-c` amount of classes.
 
-## Core Calculations
+## Main Calculations
 
 Once the prototypes are ready, one can use the main code as follows:
 
