@@ -34,5 +34,5 @@ python HBL.py --data_name syndat -e 30 -s 200 -r adam -l 1e-3 -c 5e-5 --mult 0.0
 * `nc` - Number of Classes
 * `-d` - Dimensions used for the data
 * `-ss` - Sample size per class
-* `-` - Which neural network should be used?
+* `-n` - Which neural network should be used?
 * `r_val` - r-value used for clipping
