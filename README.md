@@ -31,7 +31,7 @@ python HBL.py --data_name syndat -e 30 -s 200 -r adam -l 1e-3 -c 5e-5 --mult 0.0
 * `drop1` - Training epoch where learning rate decay takes place
 * `drop2` - Training epoch where learning rate decay takes place
 * `--seed` - Seed
-* `nc` - Number of Classes
+* `-nc` - Number of Classes
 * `-d` - Dimensions used for the data
 * `-ss` - Sample size per class
 * `-n` - Which neural network should be used?
